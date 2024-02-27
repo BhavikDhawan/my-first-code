@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('C:/Users/Bhavi/OneDrive/Pictures/thumb-1920-495521.jpg');
+            margin: 10px;
+            padding: 10px;
+        }
+
+        header {
+            text-align: center;
+            padding: 1px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: rgb(201, 84, 84);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4285f4;
+            animation: movetext 2s infinite alternate;
+            cursor: pointer;
+            transition: color 0.5s;
+        }
+
+        h2:focus {
+            animation-play-state: paused;
+            outline: none;
+        }
+
+        img {
+            border: 2px solid black;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        a {
+            font-size: 30px;
+            text-align: center;
+            margin: 0 100px;
+            color: black;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @keyframes movetext {
+            from {
+                transform: translateX(-500px);
+            }
+            to {
+                transform: translateX(1500px);
+            }
+        }
+
+        p {
+            text-align: center;
+            color: rgb(201, 84, 84);
+            font-size: 30px;
+        }
+
+        #congrats {
+            text-align: center;
+            font-size: 24px;
+            color: green;
+            display: none; 
+            position: absolute; 
+            top: 55px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        .red-text {
+            color: rgb(200, 48, 48);
+        }
+
+        .green-text {
+            color: green;
+        }
+        
+    </style>
+    <title>Interactive Website</title>
+    <meta name="description" content="Interactive website made by Bhavik Dhawan">
+</head>
+<body>
+    <header>
+        <h1>Website Made by Bhavik Dhawan</h1>
+    </header>
+    
+    <p class="red-text">TOUCH ON "CLICK ME"</p>
+    <h2 tabindex="0" onclick="showCongrats()">Click me</h2>
+
+    <img src="C:/Users/Bhavi/OneDrive/Pictures/anime-landscape-anime-art-painting-sea-wallpaper-preview.jpg"
+         alt="beautiful Picture" width="400" height="300"/>
+
+    <div>
+        <nav>
+            <a href="https://google.com" target="_blank">Click here to go back to Google</a>
+        </nav>
+    </div>
+    <div id="congrats">
+        <p class="green-text">Congratulations! You clicked successfully!</p>
+    </div>
+
+    <footer>
+        <p>&copy; Interactive Website Made by Bhavik</p>
+    </footer>
+
+    <script>
+        function showCongrats() {
+            var congratsDiv = document.getElementById("congrats");
+            congratsDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
